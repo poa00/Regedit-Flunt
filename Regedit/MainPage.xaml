@@ -299,7 +299,7 @@
                 </muxc:MenuBarItem>
             </muxc:MenuBar>
 
-            <Rectangle Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
+            <Rectangle Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Fill="Transparent" />
 
             <TextBox x:Name="PathTextBox"
                      Grid.Row="1"
@@ -311,24 +311,6 @@
                           Margin="0,0,8,0"
                           HorizontalScrollBarVisibility="Auto"
                           HorizontalScrollMode="Auto">
-                <!--<muxc:TreeView Name="RegistryTree"
-                          Expanding="RegistryTree_Expanding"
-                          ItemInvoked="RegistryTree_ItemInvoked"
-                          ItemsSource="{x:Bind Data.DataSource}"
-                          SelectionMode="Single">
-                    <muxc:TreeView.ItemTemplate>
-                        <DataTemplate x:DataType="local1:Item">
-                            <muxc:TreeViewItem IsExpanded="{x:Bind Expanded}"
-                                          IsSelected="{x:Bind Expanded, Mode=OneTime}"
-                                          ItemsSource="{x:Bind Children}">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Width="20" Source="{x:Bind Image}" />
-                                    <TextBlock Margin="12,0,24,0" Text="{x:Bind Name}" />
-                                </StackPanel>
-                            </muxc:TreeViewItem>
-                        </DataTemplate>
-                    </muxc:TreeView.ItemTemplate>
-                </muxc:TreeView>-->
                 <local1:UniversalTreeView Data="{x:Bind Data, Mode=OneWay}" />
             </ScrollViewer>
 
@@ -478,9 +460,10 @@
                                    Grid.Column="1"
                                    Width="16"
                                    HorizontalAlignment="Left"
-                                   Background="{ThemeResource SystemChromeLowColor}"
+                                   Background="Transparent"
                                    CursorBehavior="ChangeOnSplitterHover"
                                    GripperCursor="Default"
+                                   BorderThickness="1" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}"
                                    GripperForeground="{ThemeResource ApplicationForegroundThemeBrush}"
                                    ResizeBehavior="BasedOnAlignment"
                                    ResizeDirection="Auto">
